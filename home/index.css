@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    cursor: default;
+}
+
+body{
+    font-family: 'Staatliches', cursive;
+}
+
+#mainbody{
+    background-color: rgb(230,230,230);
+    font-family: 'Staatliches', cursive;
+    overflow: hidden;
+}
+
+#cabecalho{
+    width: 100%;
+    background-color: rgb(51, 51, 51);
+    height: 60px;
+    border-bottom: 3px solid rgb(103, 103, 103);
+}
+
+#cabecalhoinv{
+    width: 1500px;
+    height: 60px;
+    margin: auto;
+}
+
+#menu{
+    letter-spacing: 1px;
+    font-weight: bolder;
+    color: white;
+    display: flex;
+    justify-content: start;
+    line-height: 57px;
+    /* margin-right: 50px; */
+    
+}
+
+.menuobj{
+    padding-left: 60px;
+    padding-right: 60px;
+    transition: 0.1s;
+    cursor: pointer;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 2px;
+}
+
+#exobj{
+    padding-left: 60;
+}
+
+.menuobj:hover{
+    border-bottom: 4px solid rgb(239, 187, 64);
+    color: rgb(239, 187, 64);
+}
+/* --------------------- FIM DO CABEÇALHO --------------------- */
+
+#subcontent{
+    width: 100%;
+    background-color: rgb(86, 119, 135);
+    border-bottom: 8px solid rgb(168,189,222);
+    overflow: hidden;
+}
+
+#subcontentinv{
+    width: 1100px;
+    margin: auto;
+    display: flex;
+    margin-top: 50px;
+}
+
+#foto{
+    margin-bottom: 50px;
+    width: 250px;
+}
+
+#ofoto{
+    border-radius: 15px;
+    box-shadow: 4px 5px #333;
+}
+
+#conttext{
+    color: rgb(247, 247, 247);
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+#text1{
+
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+#textname{
+    margin-bottom: 10px;
+    font-size: 45px;
+    /* font-weight: bold; */
+    color: white;
+    text-shadow: 2px 3px #333;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 3px;
+}
+
+#text3{
+    word-wrap: break-word;
+    width: 800px;
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+}
+
+#btncontrato{
+    margin-top: 20px;
+    width: 140px;
+    height: 40px;
+    background-color: rgb(69,95,108);
+    line-height: 37px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: 0.3s;
+
+}
+
+#btncontrato:hover{
+    background-color: rgb(36,51,57);
+}
+
+/* --------------------- FIM DO SUB CONTENT --------------------- */
+
+#overview{
+    background-color: rgb(247,248,250); /*rgb(247,248,250);*/
+    overflow: hidden;
+}
+
+#OVinv{
+    width: 1100px;
+    margin: auto;
+}
+
+#OVtitle{
+    font-family: 'Staatliches', cursive;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: rgb(67, 78, 94);
+}
+
+#OVtext{
+    text-align: center;
+    width: 600px;
+    margin: auto;
+    font-size: 17px;
+    color: rgb(88,103,124);
+    font-weight: 400
+}
+
+#listc{
+    background-color: rgb(247,248,250);
+    overflow: hidden;
+}
+
+#listcinv{
+    width: 1100px;
+    margin: auto;
+}
+
+#box-content{
+    margin: auto;
+    margin-top: 120px;
+    background-color: white;
+    width: 300px;
+    border-width: 5px;
+    border-color: rgba(88,103,124, 0.7);
+    border-style: solid;
+}
+
+.linhaOV{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+#imgicon{
+    border-radius: 50%;
+    width: 80px;
+}
+
+#box-title{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(67, 78, 94);
+    margin-bottom: 25px;
+}
+
+.textOV{
+    line-height: 34px;
+    margin-left: 15px;
+    color: rgb(117,144,157);
+    font-weight: 700;
+}
+
+
+
+
+

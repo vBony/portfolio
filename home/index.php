@@ -79,7 +79,7 @@
     <div id="listc">
         <div id="listcinv">
             <div id="box-content">
-                <div class="icon"><img id="imgicon" src="imgs/webpicon.jpg" alt=""></i></div>
+                <div class="icon"><img id="imgicon" src="imgs/webpicon.jpg" alt=""></div>
                 <div id="box-title">Conhecimentos Gerais</div>
 
                     <div class="linhaOV" id="OVlinha1">

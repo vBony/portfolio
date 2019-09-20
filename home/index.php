@@ -107,6 +107,11 @@
                         <div class="textOV">MySQL</div>
                     </div>
 
+                    <div class="linhaOV" id="OVlinha1">
+                        <div><img class="imgchecked" src="imgs/checked.png" alt=""></div>
+                        <div class="textOV">Git</div>
+                    </div>
+
             </div>
             
         </div>

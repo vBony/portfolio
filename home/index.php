@@ -6,9 +6,13 @@
     <meta name="author" content="Vinicius de Assis Ferreira">
     <meta http-equiv="content-language" content="pt-br, en-US, fr" />
     <meta name="copyright" content="© 2019 Vinicius F." />
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap.min.js"></script>
     <link rel="stylesheet" href="index.css">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
-    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
 
 </head>
 
@@ -20,7 +24,7 @@
         <div id="cabecalhoinv">
             <div id="menu">
                 <div class="menuobj" id="exobj">Sobre</div>
-                <div class="menuobj">Projetos</div>
+                <div class="menuobj" onclick="window.location.href = 'http://pt.stackoverflow.com'">Projetos</div>
                 <div class="menuobj">Resumo</div>
                 <div class="menuobj">Contato</div>
             </div>
@@ -35,12 +39,12 @@
     <div id="subcontentinv">
         
         <div id="foto">
-            <img src="imgs/tempphoto" alt="" id="ofoto">
+            <img class="img-responsive" src="imgs/foto_perfil.jpg" alt="" id="ofoto">
         </div>
 
         <div id="conttext">
             <div id="text1">What is Lorem Ipsum?</div>
-            <div id="textname">Lore Ipsum</div>
+            <div id="textname">VINICIUS DE ASSIS FERREIRA</div>
             <div id="text3">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Cras in magna ornare, interdum lorem sit amet, congue libero.
@@ -74,48 +78,73 @@
             </div>
         </div>
     </div>
+    <br>
+    <br><br><br>
+    <div id="OVtitle">Conhecimentos específicos</div>
 
 
-    <div id="listc">
-        <div id="listcinv">
-            <div id="box-content">
-                <div class="icon"><img id="imgicon" src="imgs/webpicon.jpg" alt=""></div>
-                <div id="box-title">Conhecimentos Gerais</div>
+    <div class="row contentlings">
 
-                    <div class="linhaOV" id="OVlinha1">
-                        <div><img class="imgchecked" src="imgs/checked.png" alt=""></div>
-                        <div class="textOV">PHP</div>
-                    </div>
-
-                    <div class="linhaOV" id="OVlinha1">
-                        <div><img class="imgchecked" src="imgs/checked.png" alt=""></div>
-                        <div class="textOV">Javascript</div>
-                    </div>
-
-                    <div class="linhaOV" id="OVlinha1">
-                        <div><img class="imgchecked" src="imgs/checked.png" alt=""></div>
-                        <div class="textOV">Jquery</div>
-                    </div>
-
-                    <div class="linhaOV" id="OVlinha1">
-                        <div><img class="imgchecked" src="imgs/checked.png" alt=""></div>
-                        <div class="textOV">HTML/CSS</div>
-                    </div>
-
-                    <div class="linhaOV" id="OVlinha1">
-                        <div><img class="imgchecked" src="imgs/checked.png" alt=""></div>
-                        <div class="textOV">MySQL</div>
-                    </div>
-
-                    <div class="linhaOV" id="OVlinha1">
-                        <div><img class="imgchecked" src="imgs/checked.png" alt=""></div>
-                        <div class="textOV">Git</div>
-                    </div>
-
+        <div class="col-sm-4">
+            <button type="button" class="butlings" data-toggle="collapse" data-target="#frontend">Front-end</button>
+            <div id="frontend" class="collapse">
+                <ul class="list-group listalings">
+                    <li class="list-group-item linhalings">
+                        <img src="imgs/checked.png" alt="">       
+                        <p class="textlings">HTML/CSS</p>
+                    </li>
+                    <li class="list-group-item linhalings">
+                        <img src="imgs/checked.png" alt="">    
+                        <p class="textlings">Javascript</p>
+                    </li>
+                    <li class="list-group-item linhalings">
+                        <img src="imgs/checked.png" alt="">       
+                        <p class="textlings"> Jquery</p>
+                    </li>
+                    <li class="list-group-item linhalings">
+                        <img src="imgs/checked.png" alt="">      
+                        <p class="textlings"> Bootstrap</p>
+                    </li>
+                </ul>
             </div>
-            
         </div>
+
+        <div class="col-sm-4">
+            <button type="button" class="butlings" data-toggle="collapse" data-target="#backend">Back-end</button>
+            <div id="backend" class="collapse">
+                <ul class="list-group listalings">
+                    <li class="list-group-item linhalings">
+                        <img src="imgs/checked.png" alt="">   
+                        <p class="textlings">PHP</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <button type="button" class="butlings" data-toggle="collapse" data-target="#outros">Back-end</button>
+            <div id="outros" class="collapse">
+                <ul class="list-group listalings">
+                    <li class="list-group-item linhalings">
+                        <img src="imgs/checked.png" alt="">   
+                        <p class="textlings">MySQL</p>
+                    </li>
+                    <li class="list-group-item linhalings">
+                        <img src="imgs/checked.png" alt="">   
+                        <p class="textlings">Versionamento com GitHub</p>
+                    </li>
+                    <li class="list-group-item"></li>
+                </ul>
+            </div>
+        </div>
+
     </div>
+
+        
+
+
+
+    
 </div>
     
     

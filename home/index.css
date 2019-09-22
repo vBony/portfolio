@@ -5,15 +5,7 @@
     cursor: default;
 }
 
-body{
-    font-family: 'Staatliches', cursive;
-}
 
-#mainbody{
-    background-color: rgb(230,230,230);
-    font-family: 'Staatliches', cursive;
-    overflow: hidden;
-}
 
 #cabecalho{
     width: 100%;
@@ -22,15 +14,8 @@ body{
     border-bottom: 3px solid rgb(103, 103, 103);
 }
 
-#cabecalhoinv{
-    width: 1500px;
-    height: 60px;
-    margin: auto;
-}
-
 #menu{
     letter-spacing: 1px;
-    font-weight: bolder;
     color: white;
     display: flex;
     justify-content: start;
@@ -40,12 +25,12 @@ body{
 }
 
 .menuobj{
+    font-family: 'Lato', sans-serif;
     padding-left: 60px;
     padding-right: 60px;
     transition: 0.1s;
     cursor: pointer;
-    font-family: 'Staatliches', cursive;
-    letter-spacing: 2px;
+    font-size: 15px;
 }
 
 #exobj{
@@ -93,24 +78,24 @@ body{
     margin-bottom: 10px;
     font-size: 20px;
     color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #textname{
     margin-bottom: 10px;
     font-size: 45px;
-    /* font-weight: bold; */
+    font-weight: bold;
     color: white;
-    text-shadow: 2px 3px #333;
-    font-family: 'Staatliches', cursive;
-    letter-spacing: 3px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #text3{
     word-wrap: break-word;
     width: 800px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #btncontrato{
@@ -143,7 +128,7 @@ body{
 }
 
 #OVtitle{
-    font-family: 'Staatliches', cursive;
+    font-family: 'Montserrat', sans-serif;
     margin-top: 30px;
     text-align: center;
     font-size: 25px;
@@ -153,68 +138,49 @@ body{
 }
 
 #OVtext{
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     width: 600px;
     margin: auto;
-    font-size: 17px;
+    font-size: 15px;
     color: rgb(88,103,124);
     font-weight: 400
 }
 
-#listc{
-    background-color: rgb(247,248,250);
-    overflow: hidden;
+.contentlings{
+    margin-top: 50px;
 }
 
-#listcinv{
-    width: 1100px;
-    margin: auto;
-}
-
-#box-content{
-    margin: auto;
-    margin-top: 120px;
-    background-color: white;
-    width: 300px;
-    border-width: 5px;
-    border-color: rgba(88,103,124, 0.7);
-    border-style: solid;
-}
-
-.linhaOV{
+.linhalings{
     display: flex;
-    flex-direction: row;
-    margin-bottom: 15px;
-    margin-left: 15px;
+    flex-flow: row nowrap;
 }
 
-.icon{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 25px;
+
+.textlings{
+    font-size: 15px;
+    margin-left: 40px;
+    font-family: 'Montserrat', sans-serif;
 }
 
-#imgicon{
-    border-radius: 50%;
-    width: 80px;
-}
 
-#box-title{
-    margin-top: 40px;
-    text-align: center;
+.butlings{
+    background-color: rgb(86, 119, 135);
+    width: 100%;
+    height: 40px;
+    color: white;
+    border: none;
+    border-radius: 5px;
     font-size: 20px;
-    font-weight: bold;
-    color: rgb(67, 78, 94);
-    margin-bottom: 25px;
+    transition: 1s;
 }
 
-.textOV{
-    line-height: 34px;
-    margin-left: 15px;
-    color: rgb(117,144,157);
-    font-weight: 700;
+.butlings:hover{
+    background-color: rgb(136,165,179);
+}
+
+.listalings{
+    text-align: center;
 }
 
 

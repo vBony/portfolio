@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>Vinicius: Portifólio</title>
@@ -30,7 +31,6 @@
             </div>
         </div>
     </div>
-
 </header>
 <!-- CABEÇALHO TERMINA AQUI -->
 
@@ -114,7 +114,7 @@
             <div id="backend" class="collapse">
                 <ul class="list-group listalings">
                     <li class="list-group-item linhalings">
-                        <img src="imgs/checked.png" alt="">   
+                        <div><img src="imgs/checked.png" alt=""></div>
                         <p class="textlings">PHP</p>
                     </li>
                 </ul>
@@ -122,7 +122,7 @@
         </div>
 
         <div class="col-sm-4">
-            <button type="button" class="butlings" data-toggle="collapse" data-target="#outros">Back-end</button>
+            <button type="button" class="butlings" data-toggle="collapse" data-target="#outros">Outros</button>
             <div id="outros" class="collapse">
                 <ul class="list-group listalings">
                     <li class="list-group-item linhalings">
@@ -130,27 +130,81 @@
                         <p class="textlings">MySQL</p>
                     </li>
                     <li class="list-group-item linhalings">
-                        <img src="imgs/checked.png" alt="">   
+                        <div><img src="imgs/checked.png" alt=""></div>
                         <p class="textlings">Versionamento com GitHub</p>
                     </li>
-                    <li class="list-group-item"></li>
                 </ul>
             </div>
         </div>
 
+    </div> 
+    
+    <div class="container">
+        <div id="PRJtitle">Meus Últimos Projetos</div>
+
+        <div class="projsArea" id="projsL1">
+
+            <div class="boxproj">
+                <img class="imgprojs img-responsive center-block" src="slideshow/1.jpg" alt="">
+                <div class="projtitlearea">Lore Ipsum</div>
+                <div class="projtxtarea">
+                    <br>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting 
+                    industry. Lorem Ipsum has been the industry's standard dummy text
+                    ever since the 1500s, when an unknown printer took a galley of type 
+                    and scrambled it to make a type specimen book.
+                </div>
+            </div>
+
+            <div class="boxproj">
+                <img class="imgprojs img-responsive center-block" src="slideshow/1.jpg" alt="">
+                <div class="projtitlearea">Lore Ipsum</div>
+                <div class="projtxtarea">
+                    <br>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting 
+                    industry. Lorem Ipsum has been the industry's standard dummy text
+                    ever since the 1500s, when an unknown printer took a galley of type 
+                    and scrambled it to make a type specimen book.
+                </div>
+            </div>
+
+        </div>
+
+        <div class="projsArea" id="projsL2">
+        
+            <div class="boxproj">
+                <img class="imgprojs img-responsive center-block" src="slideshow/1.jpg" alt="">  
+                <div class="projtitlearea">Lore Ipsum</div>
+                <div class="projtxtarea">
+                    <br>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting 
+                    industry. Lorem Ipsum has been the industry's standard dummy text
+                    ever since the 1500s, when an unknown printer took a galley of type 
+                    and scrambled it to make a type specimen book.
+                </div>
+            </div>
+
+            <div class="boxproj">
+                <img class="imgprojs img-responsive center-block" src="slideshow/1.jpg" alt="">
+                <div class="projtitlearea">Lore Ipsum</div>
+                <div class="projtxtarea">
+                    <br>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting 
+                    industry. Lorem Ipsum has been the industry's standard dummy text
+                    ever since the 1500s, when an unknown printer took a galley of type 
+                    and scrambled it to make a type specimen book.
+                </div>
+            </div>
+        </div>
+        
     </div>
 
-        
 
-
-
-    
 </div>
-    
-    
-    
-    
 </div>
+
+</div>
+
 </body>
 
 </html>

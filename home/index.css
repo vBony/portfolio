@@ -3,9 +3,10 @@
 }
 #cabecalho{
     width: 100%;
-    background-color: rgb(51, 51, 51);
+    /* background-color: rgb(51, 51, 51); */
+    background-color: #202225;
     height: 60px;
-    border-bottom: 3px solid rgb(103, 103, 103);
+    /* border-bottom: 3px solid rgb(103, 103, 103); */
 }
 
 #menu{
@@ -39,8 +40,8 @@
 
 #subcontent{
     width: 100%;
-    background-color: rgb(86, 119, 135);
-    border-bottom: 8px solid rgb(168,189,222);
+    /* background-color: rgb(86, 119, 135); */
+    background-color: #2F3136;
     overflow: hidden;
 }
 
@@ -98,17 +99,19 @@
     margin-top: 20px;
     width: 140px;
     height: 40px;
-    background-color: rgb(69,95,108);
+    /* background-color: rgb(69,95,108); */
+    background-color: #202225;
     line-height: 37px;
     text-align: center;
     cursor: pointer;
     border-radius: 15px;
     transition: 0.3s;
+    border: 1px solid #555659;
 
 }
 
 #btncontrato:hover{
-    background-color: rgb(36,51,57);
+    background-color: #000000;
 }
 
 /* --------------------- FIM DO SUB CONTENT --------------------- */
@@ -116,7 +119,8 @@
 
 
 #overview{
-    background-color: rgb(247,248,250); /*rgb(247,248,250);*/
+    /* background-color: rgb(247,248,250); */
+    background-color: #37393E;
     overflow: hidden;
 }
 
@@ -132,7 +136,8 @@
     font-size: 25px;
     margin-bottom: 20px;
     font-weight: bold;
-    color: rgb(67, 78, 94);
+    /* color: rgb(67, 78, 94); */
+    color: white;
 }
 
 #OVtext{
@@ -141,7 +146,7 @@
     width: 600px;
     margin: auto;
     font-size: 15px;
-    color: rgb(88,103,124);
+    color: white;
     font-weight: 400
 }
 
@@ -157,7 +162,7 @@
 }
 
 #midcontent{
-    background-color: rgb(247,248,250);
+    background-color: #37393E;
 }
 
 .textlings{
@@ -168,7 +173,8 @@
 
 
 .butlings{
-    background-color: rgb(86, 119, 135);
+    /* background-color: rgb(86, 119, 135); */
+    background-color: #202225;
     width: 100%;
     height: 40px;
     color: white;
@@ -176,10 +182,18 @@
     border-radius: 5px;
     font-size: 20px;
     transition: 1s;
+    border: 1px solid #555659;
 }
 
 .butlings:hover{
-    background-color: rgb(136,165,179);
+    background-color: #000000;
+}
+
+.butlings:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    border: 1px solid #555659;
 }
 
 .listalings{
@@ -196,7 +210,8 @@
     font-size: 25px;
     margin-bottom: 50px;
     font-weight: bold;
-    color: rgb(67, 78, 94);
+    /* color: rgb(67, 78, 94); */
+    color: white;
 }
 
 .projsArea{
@@ -215,7 +230,7 @@
 .boxproj{
     width: 400px;
     height: 550px;
-    background-color: white;
+    background-color: #202225;
     border-radius: 5px;
     margin-bottom: 30px;
 }
@@ -227,7 +242,7 @@
     font-size: 17px;
     text-align: center;
     word-wrap: break-word;
-    color: #434E5E;
+    color: white;
     font-weight: 600;
 }
 
@@ -237,5 +252,5 @@
     font-size: 20px;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #567787;
+    color: #FFFFFF;
 }

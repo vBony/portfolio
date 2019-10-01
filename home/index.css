@@ -225,6 +225,7 @@
     margin-top: 15px;
     width: 350px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .boxproj{
@@ -233,6 +234,13 @@
     background-color: #202225;
     border-radius: 5px;
     margin-bottom: 30px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.boxproj:hover{
+    background-color: black;
+    border: 1px solid white;
 }
 
 .projtxtarea{
@@ -244,6 +252,7 @@
     word-wrap: break-word;
     color: white;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .projtitlearea{
@@ -253,4 +262,5 @@
     margin-bottom: 5px;
     font-weight: bold;
     color: #FFFFFF;
+    cursor: pointer;
 }

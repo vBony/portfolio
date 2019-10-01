@@ -131,7 +131,7 @@
                     </li>
                     <li class="list-group-item linhalings">
                         <div><img src="imgs/checked.png" alt=""></div>
-                        <p class="textlings">Versionamento com GitHub</p>
+                        <p class="textlings">Versionamento com Git</p>
                     </li>
                 </ul>
             </div>

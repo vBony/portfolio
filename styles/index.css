@@ -1,0 +1,392 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    transition: 0.2s;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #101113;
+}
+
+a{
+    color: white;
+}
+
+a:link {
+text-decoration:none;
+color: white;
+}
+a:visited {
+text-decoration:none;
+color: white;
+}
+
+a:hover{
+    color: white;
+}
+
+#header-background{
+    height: 250px;
+    background-color: #202225;
+    display: flex;
+    width: 100%;
+}
+
+#contentheader{
+    height: 180px;
+    width: 1280px;
+    margin: auto;
+    display: flex;
+    color: white;
+}
+
+#img img{
+    height: 180px;
+}
+#personaldata{
+    align-self: center;
+    margin-left: 30px;
+    cursor: default;
+}
+#name{
+    font-size: 35px;
+}
+
+#profissao{
+    font-size: 23px;
+    color: #d9d9d9;
+}
+
+#contacts{
+    display: flex;
+}
+
+.headericons img{
+    width: 36px;
+}
+
+#facebookicon img{
+    width: 36px;
+}
+
+#facebookicon{
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.headericons{
+    margin-left: 25px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#headerbtns{
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#buttoncontact{
+    width: 210px;
+    height: 55px;
+    background-color: #008000;
+    display: flex;
+    border-radius: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#buttoncontact:hover{
+    background-color: #035b02
+}
+
+
+#iconbtncontact img{
+    height: 32px;
+}
+
+#iconbtncontact{
+    align-self: center;
+    margin-left: 10px;
+}
+
+#txtbtncontact{
+    margin-left: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    align-self: center;
+    text-decoration: none;
+}
+
+#buttoncv{
+    width: 210px;
+    height: 55px;
+    background-color: #145a83;
+    display: flex;
+    border-radius: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#buttoncv:hover{
+    background-color: #0d3b55;
+}
+
+#iconbtncv img{
+    height: 38px;
+}
+
+#iconbtncv{
+    align-self: center;
+    margin-left: 10px;
+}
+
+#txtbtncv{
+    margin-left: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    align-self: center;
+}
+
+@media only screen and (max-width: 756px) and (min-width: 457px) {
+    #header-background{
+        height: 500px;
+        padding: 0px;
+    }
+
+    #contentheader{
+        margin: 0px;
+        margin-top: 25px;
+        flex-direction: column;
+    }
+
+    #img{
+        align-self: center;
+        width: 280px;
+        text-align: center;
+        margin-left: 35px;
+    }
+
+    #img img{
+        text-align: center;
+    }
+
+    #name{
+        align-self: center;
+        text-align: center;
+    }
+    #profissao{
+        align-self: center;
+        text-align: center;
+    }
+
+    #headerbtns{
+        flex-direction: row;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    #buttoncontact{
+        margin-right: 10px;
+    }
+
+    #buttoncv{
+        margin-left: 10px;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 457px) and (min-width:0px) {
+    #header-background{
+        height: 500px;
+        padding: 0px;
+        width: 100%;
+    }
+
+    #contentheader{
+        margin: 0px;
+        margin-top: 25px;
+        width: 440px;
+        flex-direction: column;
+        height: 450px;
+        margin: auto;
+    }
+
+    #img{
+        margin-left: 34px;
+        width: 200px;
+        align-self: center;
+        text-align: center;
+    }
+
+    #img img{
+        text-align: center;
+        height: 150px;
+    }
+
+    #name{
+        width: 200px;
+        margin: auto;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    #profissao{
+        width: 200px;
+        margin: auto;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    #contacts img{
+        width: 32px;
+    }
+
+    #headerbtns{
+        flex-direction: row;
+        margin: auto;
+        width: 410px;
+    
+    }
+
+    #buttoncontact{
+        width: 150px;
+        height: 45px;
+        cursor: pointer;
+    }
+
+    #iconbtncontact img{
+        height: 20px;
+    }
+
+    #txtbtncontact{
+        font-size: 10px;
+    }
+
+    #buttoncv{
+        width: 150px;
+        height: 45px;
+        cursor: pointer;
+    }
+
+    #iconbtncv img{
+        height: 20px;
+    }
+
+    #txtbtncv{
+        font-size: 10px;
+    }
+
+}
+/* ===========================================================================================FIM DO HEAD=========================================================================================== */
+
+
+#contentbackground{
+    background-color: #101113;
+    height: 500px;
+    width: 1280px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px;
+    margin-top: 35px;
+}
+
+#grid1{
+    width: 65%;
+}
+
+#sobremim{
+    color: white;
+    width: 800px;
+    background-color: #37393e;
+    padding-top:25px;
+    padding-bottom:25px;
+    border-radius: 5px;
+    padding-right: 25px;
+}
+
+h2{
+    font-size: 35px;
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: #eaeaea;
+    font-weight: bold;
+}
+
+p{
+    margin-left: 25px;
+    color: #FFFF;
+    font-size: 18px;
+    line-height: 32px;
+    word-spacing: 2px;
+}
+
+
+#grid2{
+    width: 35%
+}
+
+#localemail{
+    background-color: #37393e;
+    display: flex;
+    padding-top:25px;
+    padding-bottom:25px;
+    border-radius: 5px;
+    padding-right: 25px;
+    flex-direction: column;
+}
+
+#linhaendereco{
+    display: flex;
+    margin-left: 40px;
+    margin-top: 10px;
+    height: 29px;
+    line-height: 29px;
+    margin-bottom: 15px;
+
+}
+
+#linhaenderecoimg img{
+    width: 24px;
+}
+
+#linhaemail{
+    display: flex;
+    margin-left: 40px;
+    margin-top: 5px;
+    height: 29px;
+}
+
+#linhaemailimg img{
+    width: 24px;
+}
+
+#linhaemailtxt p{
+    line-height: 29px;
+}
+
+#linhafone{
+    display: flex;
+    margin-left: 40px;
+    margin-top: 10px;
+    height: 29px;
+    line-height: 29px;
+    margin-bottom: 15px;
+}
+
+#linhafoneimg img{
+    width: 24px;
+}
+
+#linhafonetxt{
+    line-height: 29px;
+}
+

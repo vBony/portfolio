@@ -23,7 +23,7 @@
             <div id="img"><img src="imgs/avatar.png" alt=""></div>
             <div id="personaldata">
                 <div id="name">Vinicius de Assis</div>
-                <div id="profissao">Desenvolvedor WEB</div>
+                <div id="profissao">Desenvolvedor Backend</div>
                 <div id="contacts">
                     <div id="facebookicon"><a href="https://www.facebook.com/vinicius.ferreira.58173000" target="_blank"><img src="imgs/facebook.png" alt=""></a></div>
                     <div id="instagramicon" class="headericons"><a href="https://www.instagram.com/vb0ny/" target="_blank"><img src="imgs/instagram.png" alt=""></a></div>
@@ -78,6 +78,30 @@
                     <div id="linhafoneimg"><img src="imgs/phone.png" alt=""></div>
                     <div id="linhafonetxt"><p>(61) 9.9951-1208</p></div>
                 </div>
+            </div>
+
+            <div id="skills">
+                <div id="skillstitle"><h3>Habilidades</h3></div>
+                <div id="skillstext">t is a long established fact that a reader will be
+                    distracted by the readable content of a page when looking
+                    at its layout. The point of using Lorem Ipsum.</div>
+
+                <div id="listaskills">
+                <ul style="list-style-type:none;">
+                    <li class="liSkills">HTML5/CSS3/Bootstrap 4</li>
+                    <li class="liSkills">PHP 7</li>
+                    <li class="liSkills">Javascript</li>
+                    <li class="liSkills">Git</li>
+                    <li class="liSkills">MySql</li>
+                </ul>
+                </div>
+            </div>
+
+            <div id="educacao">
+                <div id="educacaotitle">Educação</div>
+
+                <div id="linha1educ"><div id="imgeduc"><img src="imgs/graduacao.png" alt=""></div>      <div id="nomeCurso">Análise e Desenvolvimento de Sistemas</div></div>
+                <div id="linhanfacul"><div id="nomefacul">FAEL<span id="datafacul">(jan 2019 - até o momento)</span></div></div>
             </div>
 
         </div>

@@ -317,8 +317,9 @@ h2{
     margin-left: 25px;
     margin-top: 10px;
     margin-bottom: 30px;
-    color: #eaeaea;
+    color: #229ce3;
     font-weight: bold;
+    cursor: default;
 }
 
 p{
@@ -327,6 +328,7 @@ p{
     font-size: 18px;
     line-height: 32px;
     word-spacing: 2px;
+    cursor: default;
 }
 
 
@@ -342,6 +344,7 @@ p{
     border-radius: 5px;
     padding-right: 25px;
     flex-direction: column;
+    cursor: default;
 }
 
 #linhaendereco{
@@ -351,6 +354,7 @@ p{
     height: 29px;
     line-height: 29px;
     margin-bottom: 15px;
+    cursor: default;
 
 }
 
@@ -363,6 +367,7 @@ p{
     margin-left: 40px;
     margin-top: 5px;
     height: 29px;
+    cursor: default;
 }
 
 #linhaemailimg img{
@@ -380,6 +385,7 @@ p{
     height: 29px;
     line-height: 29px;
     margin-bottom: 15px;
+    cursor: default;
 }
 
 #linhafoneimg img{
@@ -390,3 +396,88 @@ p{
     line-height: 29px;
 }
 
+#skills{
+    background-color: #37393e;
+    display: flex;
+    border-radius: 5px;
+    flex-direction: column;
+    margin-top: 35px;
+    cursor: default;
+}
+
+#skillstitle{
+   font-size: 25px; 
+   color: #229ce3;
+   margin-left: 25px;
+   margin-top: 20px;
+   cursor: default;
+}
+
+#skillstext{
+    color: white;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    cursor: default;
+}
+
+.liSkills{
+    color: #229ce3;
+    font-size: 20px;
+    margin-left: 25px;
+    margin-top: 10px;
+    cursor: default;
+}
+
+#educacao{
+    background-color: #37393e;
+    display: flex;
+    border-radius: 5px;
+    flex-direction: column;
+    margin-top: 35px;
+    cursor: default;
+}
+
+#educacaotitle{
+   font-size: 25px; 
+   color: #229ce3;
+   margin-left: 25px;
+   margin-top: 20px;
+   cursor: default;
+}
+
+#linhafacul{
+    display: flex;
+    flex-direction: row;
+    cursor: default;
+}
+
+#linha1educ{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-top: 20px;
+    color: white;
+    cursor: default;
+}
+
+#nomeCurso{
+    margin-left: 20px;
+    line-height: 32px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: default;
+}
+
+#linhanfacul{
+    color: #969696;
+    font-size: 15px;
+    margin-left: 80px;
+    margin-bottom: 40px;
+    cursor: default;
+}
+
+#datafacul{
+    margin-left: 10px;
+    cursor: default;
+}

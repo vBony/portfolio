@@ -1,0 +1,84 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Helvetica, sans-serif;
+    transition: 0.2s;
+}
+
+#title{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#title a{
+    font-size: 12px !important;
+}
+
+#buttons-area{
+    width: 70%;
+    margin: 30px auto 30px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#buttons-area button{
+    margin-bottom: 20px;
+}
+
+.default-form{
+    width: 70%;
+    margin: 30px auto 30px auto;
+}
+
+#editar{
+    display: none;
+}
+
+#criar{
+    display: none;
+}
+
+#excluir{
+    display: none;
+}
+
+#ver{
+    display: none;
+}
+
+.default-btn-submit{
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 567px){
+    #buttons-area{
+        width: 95%;
+    }
+
+    .default-form{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 385px){
+    #title{
+        font-size: 22px;
+    }
+
+    #buttons-area{
+        flex-direction: column;
+    }
+
+    #buttons-area button{
+        height: 40px;
+    }
+
+    .default-form{
+        width: 95%;
+    }
+}

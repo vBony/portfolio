@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     background-color: #101113;
 }
 
@@ -24,6 +24,11 @@ color: white;
 
 a:hover{
     color: white;
+}
+
+p{
+    margin: 0px;
+    padding: 0px;
 }
 
 #header-background{
@@ -60,6 +65,9 @@ a:hover{
 
 #contacts{
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 20px;
 }
 
 .headericons img{
@@ -76,9 +84,8 @@ a:hover{
 }
 
 .headericons{
-    margin-left: 25px;
-    margin-top: 15px;
     cursor: pointer;
+    margin-right: 15px;
 }
 
 #headerbtns{
@@ -287,8 +294,7 @@ a:hover{
 
 #contentbackground{
     background-color: #101113;
-    height: 500px;
-    width: 1280px;
+    width: 90%;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -304,30 +310,23 @@ a:hover{
 
 #sobremim{
     color: white;
-    width: 800px;
+    width: 95%;
     background-color: #37393e;
-    padding-top:25px;
-    padding-bottom:25px;
+    padding: 20px;
     border-radius: 5px;
-    padding-right: 25px;
 }
 
-h2{
+.default-title{
     font-size: 35px;
-    margin-left: 25px;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     color: #229ce3;
     font-weight: bold;
     cursor: default;
 }
 
-p{
-    margin-left: 25px;
+.default-text{
     color: #FFFF;
     font-size: 18px;
-    line-height: 32px;
-    word-spacing: 2px;
     cursor: default;
 }
 
@@ -339,61 +338,30 @@ p{
 #localemail{
     background-color: #37393e;
     display: flex;
-    padding-top:25px;
-    padding-bottom:25px;
     border-radius: 5px;
-    padding-right: 25px;
     flex-direction: column;
     cursor: default;
+    padding: 20px;
+    justify-content: flex-start;
 }
 
 #linhaendereco{
     display: flex;
-    margin-left: 40px;
-    margin-top: 10px;
-    height: 29px;
-    line-height: 29px;
-    margin-bottom: 15px;
     cursor: default;
+    color: #FFFF;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
+#linhaenderecotxt{
+    margin-bottom: 0px !important;
+    margin-left: 10px;
 }
 
 #linhaenderecoimg img{
     width: 24px;
-}
-
-#linhaemail{
-    display: flex;
-    margin-left: 40px;
-    margin-top: 5px;
-    height: 29px;
-    cursor: default;
-}
-
-#linhaemailimg img{
-    width: 24px;
-}
-
-#linhaemailtxt p{
-    line-height: 29px;
-}
-
-#linhafone{
-    display: flex;
-    margin-left: 40px;
-    margin-top: 10px;
-    height: 29px;
-    line-height: 29px;
-    margin-bottom: 15px;
-    cursor: default;
-}
-
-#linhafoneimg img{
-    width: 24px;
-}
-
-#linhafonetxt{
-    line-height: 29px;
 }
 
 #skills{
@@ -403,29 +371,39 @@ p{
     flex-direction: column;
     margin-top: 35px;
     cursor: default;
+    padding: 20px;
+}
+
+#listaskills{
+    display: flex;
+    flex-direction: row;
 }
 
 #skillstitle{
    font-size: 25px; 
    color: #229ce3;
-   margin-left: 25px;
-   margin-top: 20px;
    cursor: default;
 }
 
 #skillstext{
     color: white;
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-bottom: 15px;
     cursor: default;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#separatorskills{
+    height: inherit;
+    border-left: 3px solid white;
+    width: 2px;
+    border-radius: 10px;
 }
 
 .liSkills{
-    color: #229ce3;
-    font-size: 20px;
-    margin-left: 25px;
-    margin-top: 10px;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-left: 20px;
     cursor: default;
 }
 
@@ -435,49 +413,35 @@ p{
     border-radius: 5px;
     flex-direction: column;
     margin-top: 35px;
+    padding: 20px;
     cursor: default;
 }
 
 #educacaotitle{
+   width: 100%;
    font-size: 25px; 
    color: #229ce3;
-   margin-left: 25px;
-   margin-top: 20px;
    cursor: default;
+   margin-bottom: 10px;
 }
 
-#linhafacul{
-    display: flex;
-    flex-direction: row;
-    cursor: default;
+.block-educ{
+    margin-bottom: 6px;
 }
 
-#linha1educ{
-    display: flex;
-    flex-direction: row;
-    margin-left: 30px;
-    margin-top: 20px;
-    color: white;
-    cursor: default;
+.name-educ{
+    color: #FFFF;
+    font-size: 18px;
 }
 
-#nomeCurso{
-    margin-left: 20px;
-    line-height: 32px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    cursor: default;
-}
-
-#linhanfacul{
+.year-school{
     color: #969696;
-    font-size: 15px;
-    margin-left: 80px;
-    margin-bottom: 40px;
-    cursor: default;
+    font-size: 16px;
 }
 
-#datafacul{
-    margin-left: 10px;
-    cursor: default;
+.separator-educ{
+    width: 80%;
+    border: 1px solid #969696;
+    border-radius: 10px;
+    margin-top: 5px;
 }

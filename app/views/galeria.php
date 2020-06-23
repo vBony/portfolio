@@ -1,0 +1,1 @@
+<h3>Olá <?=$nome?>, você possui <strong><?=$nfotos?></strong> em sua galeria!</h3>

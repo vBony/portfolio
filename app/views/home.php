@@ -34,6 +34,11 @@
     </div>
 </header>
 
+<!-- <iframe id="telegram" style="border:0px;height:500px;width:400px;margin:5px;box-shadow: 0 0 16px 3px rgba(0,0,0,.2);" src="https://xn--r1a.website/s/v_bony"></iframe> -->
+<div id="contrate-me-area">
+    <button id="contrate-me-btn"><img src="<?=BASE_URL?>app/assets/images/telegram-logo.png" alt=""> <div>Contrate-me</div></button>
+</div>
+
 <div id="contentbackground">
     <div id="grid1">
         <div id="sobremim" class="default-box-grid-1">

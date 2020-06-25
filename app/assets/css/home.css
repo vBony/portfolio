@@ -306,6 +306,53 @@ p{
     background-color: #AA0E0E;
 }
 
+#telegram{
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    display: none;
+}
+
+#contrate-me-area{
+    width: 200px;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    border-radius: 5px;
+    border: 4px solid #229ce3;
+}
+
+#contrate-me-btn{
+    margin: 10px auto 10px auto;
+    background-color: #2BA2D5;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    animation: shadow-pulse 1s infinite;
+}
+
+#contrate-me-btn img{
+    height: 20px;
+    margin-right: 10px;
+}
+
+@keyframes shadow-pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+  }
+}
+
 @media screen and (max-width: 768px){
     #contentbackground{
         width: 95% !important;

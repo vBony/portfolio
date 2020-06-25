@@ -48,6 +48,9 @@
             <button type="submit" class="btn btn-primary default-btn-submit">Enviar</button>
         </div>
 
+        <span>div .default-subtitle para subtitulos</span><br>
+        <span>div .default-paragraph para paragrafos</span>
+
     </form>
 
 
@@ -87,6 +90,9 @@
         <div class="form-group">
             <button type="submit" class="btn btn-info default-btn-submit">Editar</button>
         </div>
+
+        <span>div .default-subtitle para subtitulos</span><br>
+        <span>div .default-paragraph para paragrafos</span>
     </form>
     
 

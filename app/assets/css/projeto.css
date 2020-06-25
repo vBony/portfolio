@@ -1,0 +1,165 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body{
+    background-color: #101113;
+}
+
+#header-div{
+    padding: 20px;
+    background-color: #202225;
+}
+
+#previous-btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+#previous-btn:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color: #37393E;
+    color: white;
+}
+
+#content-wrapper{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.default-box{
+    width: 100%;
+    background-color: #37393E;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 25px;
+}
+
+.default-title{
+    font-size: 30px;
+    color: #229CE3;
+    font-weight: bold;
+    margin: 0px 0px 20px 10px ;
+}
+
+.default-subtitle{
+    font-size: 20px;
+    color: #229CE3;
+    font-weight: bold;
+    margin: 25px 0px 10px 10px;
+
+}
+
+.default-paragraph{
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+    text-indent: 15px;
+    width: 95%;
+    margin-left: 10px;
+}
+
+#tags-area{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.tag{
+    padding: 0px 12px 0px 12px;
+    width: fit-content;
+    border: #AA0E0E 3px solid;
+    border-radius: 15px;
+    color: white;
+    background-color: #AA0E0E;
+    cursor: pointer;
+}
+
+.att-box{
+    width: 90%;
+    border: #101113 3px solid;
+    border-radius: 8px;
+    margin: auto;
+    background-color: #202225;
+}
+
+.header-att{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    padding: 5px 0px 5px 0px;
+    font-size: 15px;
+}
+
+.att-title, .date-att{
+    font-family: 'Source Code Pro', monospace !important;
+}
+
+.body-att{
+    width: 95%;
+    margin: auto;
+}
+
+.text-att{
+    font-size: 13px;
+    color: #a0a0a0;
+    padding: 5px 0px 5px 0px;
+    font-family: 'Source Code Pro', monospace;
+}
+
+#contrate-me-area{
+    width: 200px;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    border-radius: 5px;
+    border: 4px solid #229ce3;
+}
+
+#contrate-me-btn{
+    margin: 10px auto 10px auto;
+    background-color: #2BA2D5;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    animation: shadow-pulse 1s infinite;
+}
+
+#contrate-me-btn img{
+    height: 20px;
+    margin-right: 10px;
+}
+
+@keyframes shadow-pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+  }
+}

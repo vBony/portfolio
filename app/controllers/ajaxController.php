@@ -85,5 +85,55 @@ class ajaxController extends controllerHelper{
                 echo json_encode($ajaxResponse);
             }
         }
+
+        if(isset($_POST['action']) && $_POST['action'] == 'criar-att'){
+            $id_projeto = $_POST['id_projeto'];
+            $titulo = $_POST['titulo'];
+            $desc = $_POST['descricao'];
+            $date = $_POST['date'];
+            $time = $_POST['hora'];
+
+            if($projetoOperator->insertAtt($id_projeto, $titulo, $desc, $date, $time) == false){
+                $ajaxResponse['msg'] = 'error';
+                echo json_encode($ajaxResponse);
+            }else{
+                $ajaxResponse['msg'] = 'done';
+                echo json_encode($ajaxResponse);
+            }
+        }
+
+        if(isset($_POST['action']) && $_POST['action'] == 'get_to_edit-att'){
+            $id = $_POST['id'];
+
+            echo json_encode($ajaxResponse['att'] = $projetoOperator->getAtt($id));
+        }
+
+        if(isset($_POST['action']) && $_POST['action'] == 'editar-att'){
+            $id_att = $_POST['id_att'];
+            $titulo = $_POST['titulo'];
+            $desc = $_POST['descricao'];
+            $date = $_POST['date'];
+            $time = $_POST['hora'];
+
+            if($projetoOperator->editAtt($id_att, $titulo, $desc, $date, $time) == false){
+                $ajaxResponse['msg'] = 'error';
+                echo json_encode($ajaxResponse);
+            }else{
+                $ajaxResponse['msg'] = 'done';
+                echo json_encode($ajaxResponse);
+            }
+        }
+
+        if(isset($_POST['action']) && $_POST['action'] == 'deletar-att'){
+            $id = $_POST['id'];
+
+            if($projetoOperator->deleteAtt($id)){
+                $ajaxResponse['msg'] = 'done';
+                echo json_encode($ajaxResponse);
+            }else{
+                $ajaxResponse['msg'] = 'error';
+                echo json_encode($ajaxResponse);
+            }
+        }
     }
 }

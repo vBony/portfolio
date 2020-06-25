@@ -21,6 +21,13 @@ $(document).ready(function(){
         $('#ver').fadeIn('fast');
     });
 
+    $('#atts-btn').on('click',function(){
+        $('.default-form').hide();
+        $('#forms-att-area').fadeIn('fast');
+    });
+
+    
+
 
 
 
@@ -145,5 +152,142 @@ $(document).ready(function(){
         }else{
             window.open(base_url+'projeto/n/'+keyname); 
         }
+    });
+
+
+
+
+
+
+    $('#btn-att-criar').on('click', function(){
+        $('.default-att-form').hide();
+        $('#form-att-criar').fadeIn('fast');
+    });
+
+    $('#btn-att-editar').on('click', function(){
+        $('.default-att-form').hide();
+        $('#form-att-editar').fadeIn('fast');
+    });
+
+    $('#btn-att-excluir').on('click', function(){
+        $('.default-att-form').hide();
+        $('#form-att-excluir').fadeIn('fast');
+    });
+
+    $('#form-att-criar').on('submit', function(event){
+        event.preventDefault();
+
+        var id_projeto = $("option:selected", '#criar-att-select').val()
+        var titulo = $('#titulo-att-criar').val();
+        var desc = $('#desc-att-criar').val();
+
+        var date = $('#data-att-criar').val();
+        var date = date.split('-');
+        var datastr = date[2]+'-'+date[1]+'-'+date[0];
+
+        var hora = $('#time-att-criar').val();
+
+        
+        $.ajax({
+            method: 'POST',
+            url: base_url+'ajax/projeto',
+            dataType: 'json',
+            data: {action:'criar-att', id_projeto: id_projeto, titulo: titulo, descricao: desc, date: datastr, hora: hora},
+            success: function(json){
+                if(json.msg === 'done'){
+                    alert('Atualização criada com sucesso!');
+                    location.reload();
+                }else{
+                    alert('Houve um erro na criação, verifique o código e tente novamente!');
+                }
+            }
+        })
+    })
+
+
+
+
+
+    $('#editar-att-select').on('change', function(){
+        var optionSelected = $("option:selected", this).val();
+
+        $.ajax({
+            method: 'POST',
+            url: base_url+'ajax/projeto',
+            dataType: 'json',
+            data: {id: optionSelected, action:'get_to_edit-att'},
+            success: function(json){
+                var date = json.data_att.split('-');
+                datestr = date[2]+'-'+date[1]+'-'+date[0];
+
+                $('#project-name-att').val(json.nome_projeto);
+                $('#titulo-att-editar').val(json.titulo);
+                $('#desc-att-editar').val(json.descricao);
+                $('#data-att-editar').val(datestr);
+                $('#time-att-editar').val(json.hora);
+            }
+        })
+    });
+
+
+    $('#form-att-editar').on('submit', function(event){
+        event.preventDefault();
+
+        var id_att = $("option:selected", '#editar-att-select').val()
+        var titulo = $('#titulo-att-editar').val();
+        var desc = $('#desc-att-editar').val();
+
+        var date = $('#data-att-editar').val();
+        var date = date.split('-');
+        var datastr = date[2]+'-'+date[1]+'-'+date[0];
+
+        var hora = $('#time-att-editar').val();
+
+        
+        $.ajax({
+            method: 'POST',
+            url: base_url+'ajax/projeto',
+            dataType: 'json',
+            data: {action:'editar-att', id_att: id_att, titulo: titulo, descricao: desc, date: datastr, hora: hora},
+            success: function(json){
+                if(json.msg === 'done'){
+                    alert('Atualização editada com sucesso!');
+                    location.reload();
+                }else{
+                    alert('Houve um erro na criação, verifique o código e tente novamente!');
+                }
+            }
+        })
+    })
+
+
+
+
+
+
+
+    $('#form-att-excluir').on('submit', function(event){
+        event.preventDefault();
+
+        var id = $("option:selected", '#att-excluir-select').val()
+
+        if(id === '0'){
+            return;
+        }
+        
+        $.ajax({
+            method: 'POST',
+            url: base_url+'ajax/projeto',
+            dataType: 'json',
+            data: {id: id, action: 'deletar-att'},
+            success: function(json){
+                if(json.msg === 'done'){
+                    alert('Atualizacão deletada com sucesso!');
+                    location.reload();
+                }else{
+                    alert('Houve um erro na criação, verifique o código e tente novamente!');
+                }
+            }
+        })
     });
 });

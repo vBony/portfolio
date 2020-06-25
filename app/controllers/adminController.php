@@ -15,6 +15,7 @@ class adminController extends controllerHelper{
 
         $data = array();
         $data['projects'] = $projetoOperator->getAllProjects();
+        $data['atts'] = $projetoOperator->getAllAtts();
         
 
         $this->loadView('admin', $data);

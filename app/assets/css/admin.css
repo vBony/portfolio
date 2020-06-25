@@ -55,12 +55,59 @@
     font-weight: bold;
 }
 
+#forms-att-area{
+    width: 70%;
+    margin: auto;
+    display: none;
+}
+
+#buttons-att-area{
+    margin: 30px auto 30px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#buttons-att-area button{
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.time-date-area{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.time-date{
+    width: 40%;
+    margin-right: 20px;
+}
+
+#form-att-criar{
+    display: none;
+}
+
+#form-att-editar{
+    display: none;
+}
+
+#form-att-excluir{
+    display: none;
+}
+
 @media screen and (max-width: 567px){
     #buttons-area{
         width: 95%;
     }
 
     .default-form{
+        width: 95%;
+    }
+
+    #forms-att-area{
         width: 95%;
     }
 }
@@ -76,6 +123,16 @@
 
     #buttons-area button{
         height: 40px;
+    }
+
+    #buttons-att-area{
+        justify-content: center;
+        width: 100%;
+    }
+
+    #buttons-att-area button{
+        width: 100%;
+        margin: 0px 0px 10px 0px !important;
     }
 
     .default-form{

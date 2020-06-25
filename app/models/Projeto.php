@@ -31,6 +31,16 @@ class Projeto extends modelHelper{
         return $data;
     }
 
+    public function getAtt($id){
+        $sql = "SELECT atualizacoes.id, atualizacoes.titulo, atualizacoes.descricao, atualizacoes.data_att, atualizacoes.hora, projetos.nome as nome_projeto FROM atualizacoes INNER JOIN projetos ON atualizacoes.id_projeto = projetos.id";
+        $sql = $this->db->prepare($sql);
+        $sql->bindValue(":id", $id);
+        $sql->execute();
+
+        $data = $sql->fetch(PDO::FETCH_ASSOC);
+        return $data;
+    }
+
     public function getProjetoFromKeyname($keyname){
         $sql = "SELECT * FROM projetos WHERE keyname = :keyname";
         $sql = $this->db->prepare($sql);
@@ -58,6 +68,19 @@ class Projeto extends modelHelper{
         return true;
     }
 
+    public function editAtt($id_att, $titulo, $desc, $date, $time){
+        $sql = "UPDATE atualizacoes SET titulo= :titulo, descricao= :descricao, data_att= :data_att, hora= :hora WHERE id= :id";
+        $sql = $this->db->prepare($sql);
+        $sql->bindValue(":titulo", $titulo);
+        $sql->bindValue(":descricao", $desc);
+        $sql->bindValue(":data_att", $date);
+        $sql->bindValue(":hora", $time);
+        $sql->bindValue(":id", $id_att);
+        $sql->execute();
+
+        return true;
+    }
+
     public function deleteProject($id){
         $sql = "DELETE FROM projetos WHERE id = :id";
         $sql = $this->db->prepare($sql);
@@ -65,5 +88,37 @@ class Projeto extends modelHelper{
         $sql->execute();
 
         return true;
+    }
+
+    public function deleteAtt($id){
+        $sql = "DELETE FROM atualizacoes WHERE id = :id";
+        $sql = $this->db->prepare($sql);
+        $sql->bindValue(":id", $id);
+        $sql->execute();
+
+        return true;
+    }
+
+    public function insertAtt($id_projeto, $titulo, $desc, $date, $time){
+        $sql = "INSERT INTO atualizacoes(id, id_projeto, titulo, descricao, data_att, hora) VALUES (NULL, :id_projeto, :titulo, :descricao, :data_att, :hora)";
+
+        $sql = $this->db->prepare($sql);
+        $sql->bindValue(":id_projeto", $id_projeto);
+        $sql->bindValue(":titulo", $titulo);
+        $sql->bindValue(":descricao", $desc);
+        $sql->bindValue(":data_att", $date);
+        $sql->bindValue(":hora", $time);
+        $sql->execute();
+
+        return true;
+    }
+
+    public function getAllAtts(){
+        $sql = "SELECT atualizacoes.id, atualizacoes.id_projeto, atualizacoes.titulo, atualizacoes.descricao, atualizacoes.data_att, atualizacoes.hora, projetos.nome as nome_projeto FROM atualizacoes INNER JOIN projetos ON atualizacoes.id_projeto = projetos.id";
+        $sql = $this->db->query($sql);
+
+        $data = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+        return $data;
     }
 }

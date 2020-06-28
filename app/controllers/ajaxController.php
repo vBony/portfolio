@@ -136,4 +136,38 @@ class ajaxController extends controllerHelper{
             }
         }
     }
+
+    public function home(){
+        $homeOperator = new User();
+        $ajaxResponse = array();
+
+        if(isset($_POST['captcha']) && !empty($_POST['captcha'])){
+            $secret_key = "6LdgX6oZAAAAAK1rd8VsCFcC-XCMdC_y85gPVhXb";
+            $reponse_captcha = $_POST['captcha'];
+
+            $verify_captcha = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secret_key."&response=".$reponse_captcha);
+
+            $captcha_success = json_decode($verify_captcha);
+
+            if($captcha_success->success == true){
+                if(isset($_POST['email']) && !empty($_POST['email']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+                    $fname = strip_tags($_POST['fname']);
+                    $lname = strip_tags($_POST['lname']);
+                    $email = strip_tags($_POST['email']);
+                    $msg = strip_tags($_POST['msg']);
+        
+                    if($homeOperator->sendEmail($fname, $lname, $email, $msg) == true){
+                        $ajaxResponse['msg'] = "done";
+                        echo json_encode($ajaxResponse);
+                    }
+                }
+            }else{
+                $ajaxResponse['msg'] = "error-captcha";
+                echo json_encode($ajaxResponse);
+            }
+        }
+
+        
+
+    }
 }

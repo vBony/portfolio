@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Projeto: <?=$project['nome']?></title>
+    <title>vbony - <?=$project['nome']?></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,119 +11,113 @@
     <link rel="stylesheet" href="<?=BASE_URL?>app/assets/css/projeto.css">
     <meta name="copyright" content="© 2020 Vinicius de A. Ferreira" />
     <script type="text/javascript" src="<?=BASE_URL?>app/assets/js/projeto.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
 </head>
 
 <body>
-    <div id="contrate-me-area">
-        <button id="contrate-me-btn"><img src="<?=BASE_URL?>app/assets/images/telegram-logo.png" alt=""> <div>Contrate-me</div></button>
-    </div>
+        <header>
+            <div class="wrapper-content header">
+                    <div id="logo-area">
+                        <div id="btn-voltar">
+                            <i class="fas fa-angle-left"></i>
+                        </div>
 
+                        <div id="logo">vbony</div>
+                        <div id="session-logo">projeto</div>
+                    </div>
 
-    <div id="header-div">
-        <a href="<?=BASE_URL?>" class="previous" id="previous-btn">&laquo; Voltar</a>
-    </div>
-
-    <div id="content-wrapper">
-        <div class="default-box">
-            <div class="default-title"><?=$project['nome']?></div>
-            <div class="default-subtitle">Teste</div>
-            <div class="default-paragraph">
-                Lorem Ipsum is simply dummy text of the printing and 
-                typesetting industry. Lorem Ipsum has been the industry's 
-                standard dummy text ever since the 1500s, when an unknown 
-                printer took a galley of type and scrambled it to make a 
-                type specimen book. It has survived not only five 
-                centuries, but also the leap into electronic typesetting, 
-                remaining essentially unchanged. It was popularised in 
-                the 1960s with the release of Letraset sheets containing 
-                Lorem Ipsum passages, and more recently with desktop 
-                publishing software like Aldus PageMaker including versions 
-                of Lorem Ipsum.
-            </div>
-
-            <div class="default-paragraph">
-                Contrary to popular belief, Lorem Ipsum is not simply random 
-                text. It has roots in a piece of classical Latin literature 
-                from 45 BC, making it over 2000 years old. Richard McClintock, 
-                a Latin professor at Hampden-Sydney College in Virginia, 
-                looked up one of the more obscure Latin words, consectetur, 
-                from a Lorem Ipsum passage, and going through the cites of 
-                the word in classical literature, discovered the undoubtable 
-                source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 
-                of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) 
-                by Cicero, written in 45 BC. This book is a treatise on the 
-                theory of ethics, very popular during the Renaissance. 
-                The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", 
-                comes from a line in section 1.10.32.
-            </div>
-
-            <div class="default-subtitle">Lorem Ipsum</div>
-
-            <div class="default-paragraph">
-                There are many variations of passages of Lorem Ipsum available, 
-                but the majority have suffered alteration in some form, by 
-                injected humour, or randomised words which don't look even 
-                slightly believable. If you are going to use a passage of 
-                Lorem Ipsum, you need to be sure there isn't anything embarrassing 
-                hidden in the middle of text. All the Lorem Ipsum generators 
-                on the Internet tend to repeat predefined chunks as necessary, 
-                making this the first true generator on the Internet. It uses 
-                a dictionary of over 200 Latin words, combined with a handful 
-                of model sentence structures, to generate Lorem Ipsum which 
-                looks reasonable. The generated Lorem Ipsum is therefore always 
-                free from repetition, injected humour, or non-characteristic words etc.
-            </div>
-        </div>
-
-        <div class="default-box">
-            <div class="default-title">Tecnologias utilizadas</div>
-
-            <div id="tags-area">
-                <?php foreach($tags as $data){ ?>
-                    <div class="tag"><?=$data?></div>
-                <?php } ?>
-            </div>
-        </div>
-
-        <div class="default-box">
-        <div class="default-title">Últimas atualizações</div>
-            <div class="att-box">
-                <div class="header-att">
-                    <div class="att-title">Lorem ipsum</div>
-                    <div class="date-att">00/00/00 ás 00:00</div>
+                <div id="menu-area">
+                    <nav>
+                        <a href="" class="nav-items">Sobre</a>
+                        <a href="" class="nav-items">Fotos</a>
+                        <a href="" class="nav-items">Atualizações</a>
+                    </nav>
                 </div>
+            </div>
+        </header>
 
-                <div class="body-att">
-                    <div class="text-att">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing 
-                        elit. Nunc neque erat, consectetur quis volutpat non, 
-                        molestie molestie nisi. Curabitur sodales, neque a 
-                        ultrices malesuada, leo eros sagittis est, ut sodales 
-                        augue orci a tortor. Pellentesque id interdum nisl. 
-                        Sed a mattis nisi, at interdum neque.
+        <section id="s_sobre">
+            <div class="wrapper-content sobre">
+                
+                <div class="grid-principal">
+                    <h2 class=principal-title><?=$project['nome']?></h2>
+                    <div id="text-area">
+                        <?=$project['texto']?>
+                    </div>
+
+                    <div class="default-subtitle">Lorem ipsum</div>
+                </div>
+                <div class="grid-secondary">
+                    <div class="gs-wrapper tecnologias">
+                        <h4 class="box-title">Tecnologias</h4>
+                        <div id="tec-area">
+                            <?php $local_tags = explode(',', $project['tags']);?>
+                            <?php foreach($local_tags as $data) {?>
+                                <span><?=$data?></span>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-    </div>
+        <section id="s_fotos">
+            <div class="wrapper-content fotos">
+                <div id="carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel" data-slide-to="1"></li>
+                        <li data-target="#carousel" data-slide-to="2"></li>
+                        <li data-target="#carousel" data-slide-to="3"></li>
+                        <li data-target="#carousel" data-slide-to="4"></li>
+                        <li data-target="#carousel" data-slide-to="5"></li>
+                        <li data-target="#carousel" data-slide-to="6"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox" id="teste">
+                        <div class="carousel-item active">
+                            <div class="img"><img class="rounded mx-auto d-block img-fluid" src="https://picsum.photos/1280/720?random=1" alt="First slide"></div>
+                        </div>
 
-    
+                        <div class="carousel-item">
+                            <div class="img"><img class="rounded mx-auto d-block img-fluid" src="https://picsum.photos/1280/720?random=2" alt="Second slide"></div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="img"><img class="rounded mx-auto d-block img-fluid" src="https://picsum.photos/1280/720?random=3" alt="Third slide"></div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="img"><img class="rounded mx-auto d-block img-fluid" src="https://picsum.photos/1280/720?random=4" alt="Third slide"></div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="img"><img class="rounded mx-auto d-block img-fluid" src="https://picsum.photos/1280/720?random=5" alt="Third slide"></div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="img"><img class="rounded mx-auto d-block img-fluid" src="https://picsum.photos/1280/720?random=6" alt="Third slide"></div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="img"><img class="rounded mx-auto d-block img-fluid" src="https://picsum.photos/1280/720?random=7" alt="Third slide"></div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+
 </body>
 
-
-<!-- <h1>Nome do projeto: <?=$project['nome']?></h1>
-
-<h3>Texto</h3>
-<p><?=$project['texto']?></p>
-
-<div>
-    <span>Tags:</span>
-    <ol>
-        <?php foreach($tags as $data){ ?>
-            <li><?=$data?></li>
-        <?php } ?>
-    </ol>
-</div> -->
+</html>

@@ -1,8 +1,11 @@
 $(document).ready(function(){
-    $('#contrate-me-area').hide();
-    $('#contrate-me-area').delay(3000).show('fast');
+    var base_url = 'http://localhost/portfolio/'
 
-    $('#contrate-me-btn').on('click', function(){
-       window.open("https://т.website/v_bony");
-    });
+    $('#btn-voltar').on('click', function(){
+        document.location.href = base_url;
+    })
+
+    $('#logo').on('click', function(){
+        document.location.href = base_url;
+    })
 });

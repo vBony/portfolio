@@ -9,11 +9,12 @@ class Projeto extends modelHelper{
         return $data;
     }
 
-    public function insertProject($nome, $keyname, $desc, $tags){
-        $sql = "INSERT INTO projetos(keyname, id, nome, texto, tags) VALUES (:keyname, NULL, :nome, :texto, :tags)";
+    public function insertProject($nome, $keyname, $resumo, $desc, $tags){
+        $sql = "INSERT INTO projetos(keyname, id, nome, resumo, texto, tags) VALUES (:keyname, NULL, :nome, :resumo, :texto, :tags)";
         $sql = $this->db->prepare($sql);
         $sql->bindValue(":keyname", $keyname);
         $sql->bindValue(":nome", $nome);
+        $sql->bindValue(":resumo", $resumo);
         $sql->bindValue(":texto", $desc);
         $sql->bindValue(":tags", $tags);
         $sql->execute();
@@ -55,11 +56,12 @@ class Projeto extends modelHelper{
         }
     }
 
-    public function editProject($id, $nome, $keyname, $desc, $tags){
-        $sql = "UPDATE projetos SET keyname= :keyname, nome= :nome, texto= :texto, tags= :tags WHERE id= :id";
+    public function editProject($id, $nome, $resumo, $keyname, $desc, $tags){
+        $sql = "UPDATE projetos SET keyname= :keyname, nome= :nome, resumo= :resumo, texto= :texto, tags= :tags WHERE id= :id";
         $sql = $this->db->prepare($sql);
         $sql->bindValue(":keyname", $keyname);
         $sql->bindValue(":nome", $nome);
+        $sql->bindValue(":resumo", $resumo);
         $sql->bindValue(":texto", $desc);
         $sql->bindValue(":tags", $tags);
         $sql->bindValue(":id", $id);

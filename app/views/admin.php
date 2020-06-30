@@ -35,6 +35,11 @@
         </div>
 
         <div class="form-group">
+            <label for="resumo-projeto-criar">Resumo: </label>
+            <input type="text" class="form-control" id="resumo-projeto-criar" aria-describedby="emailHelp" autocomplete="off">
+        </div>
+
+        <div class="form-group">
             <label for="descricao">Descricao: </label>
             <textarea class="form-control" id="descricao-criar" rows="10"></textarea>
         </div>
@@ -49,7 +54,7 @@
         </div>
 
         <span>div .default-subtitle para subtitulos</span><br>
-        <span>div .default-paragraph para paragrafos</span>
+        <span>p .default-paragraph para paragrafos</span>
 
     </form>
 
@@ -78,6 +83,11 @@
         </div>
 
         <div class="form-group">
+            <label for="resumo-projeto-editar">Resumo: </label>
+            <input type="text" class="form-control" id="resumo-projeto-editar" aria-describedby="emailHelp" autocomplete="off">
+        </div>
+
+        <div class="form-group">
             <label for="descricao">Descricao: </label>
             <textarea class="form-control" id="descricao-editar" rows="10"></textarea>
         </div>
@@ -92,7 +102,7 @@
         </div>
 
         <span>div .default-subtitle para subtitulos</span><br>
-        <span>div .default-paragraph para paragrafos</span>
+        <span>p .default-paragraph para paragrafos</span>
     </form>
     
 

@@ -39,14 +39,18 @@ $(document).ready(function(){
 
         var keyname = $('#keyname-criar').val();
         var nome = $('#nome-projeto-criar').val();
+        var resumo = $('#resumo-projeto-criar').val();
         var desc = $('#descricao-criar').val();
         var tags = $('#tags-criar').val();
 
+        if(keyname.length <= 1){
+            alert("Todos os campos são obrigatórios!");
+        }else{
             $.ajax({
                 method: 'POST',
                 url: base_url+'ajax/projeto',
                 dataType: 'json',
-                data: {keyname: keyname, nome: nome, desc: desc, tags: tags, action:'criar'},
+                data: {keyname: keyname, nome: nome, resumo: resumo, desc: desc, tags: tags, action:'criar'},
                 success: function(json){
                     if(json.msg === 'done'){
                         alert('Projeto criado com sucesso!');
@@ -56,6 +60,7 @@ $(document).ready(function(){
                     }
                 }
             })
+        }
     })
 
 
@@ -75,6 +80,7 @@ $(document).ready(function(){
             success: function(json){
                 $('#keyname-editar').val(json.keyname);
                 $('#nome-projeto-editar').val(json.nome);
+                $('#resumo-projeto-editar').val(json.resumo);
                 $('#descricao-editar').val(json.texto);
                 $('#tags-editar').val(json.tags);
             }
@@ -89,27 +95,30 @@ $(document).ready(function(){
         var keyname = $('#keyname-editar').val();
         var id = $("option:selected", '#editar-select').val()
         var nome = $('#nome-projeto-editar').val();
+        var resumo = $('#resumo-projeto-editar').val();
         var descricao = $('#descricao-editar').val();
         var tags = $('#tags-editar').val();
 
         if(id === '0'){
             return;
-        }
+        }else{
 
-        $.ajax({
-            method: 'POST',
-            url: base_url+'ajax/projeto',
-            dataType: 'json',
-            data: {id: id, keyname: keyname, nome: nome, desc: descricao, tags: tags, action: 'editar'},
-            success: function(json){
-                if(json.msg === 'done'){
-                    alert('Projeto editado com sucesso!');
-                    location.reload();
-                }else{
-                    alert('Houve um erro na criação, verifique o código e tente novamente!');
+            $.ajax({
+                method: 'POST',
+                url: base_url+'ajax/projeto',
+                dataType: 'json',
+                data: {id: id, keyname: keyname, nome: nome, resumo: resumo, desc: descricao, tags: tags, action: 'editar'},
+                success: function(json){
+                    if(json.msg === 'done'){
+                        alert('Projeto editado com sucesso!');
+                        location.reload();
+                    }else{
+                        alert('Houve um erro na criação, verifique o código e tente novamente!');
+                    }
                 }
-            }
-        })
+            })
+
+        }
     })
 
 

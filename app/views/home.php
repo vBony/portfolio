@@ -125,25 +125,25 @@
         <div class="content-wrapper projects">
             <h3>Meus Projetos</h3>
 
-            <div class="box-projects">
-                <h4>benurse</h4>
+            <?php foreach ($projects as $data){ ?>
+                <div class="box-projects">
+                    <h4><?=$data['nome'];?></h4>
 
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing 
-                    and typesetting industry. Lorem Ipsum has been 
-                    the industry's standard dummy text ever since the 
-                    1500s, when an unknown printer took a galley of 
-                    type and scrambled it to make a type specimen book.
-                </p>
+                    <p><?= $data['resumo']; ?></p>
 
-                <div class="tags-area">
-                    <div class="tags">php</div>
+                    <div class="tags-area">
+                        <?php $localtags = explode(',', $data['tags']); ?>
+                        <?php foreach($localtags as $localtags_extracted) { ?>
+                            <div class="tags"><?=$localtags_extracted?></div>
+                        <?php } ?>
+                    </div>
+                    
+                        
+                    <div class="btns-area-project">
+                        <button class="btns-project" data-attr="<?=$data['keyname']?>" >Mais informações</button>
+                    </div>
                 </div>
-
-                <div class="btns-area-project">
-                    <button class="btns-project">Mais informações</button>
-                </div>
-            </div>
+            <?php } ?>
         </div>
     </section>
 

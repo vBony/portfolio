@@ -32,6 +32,14 @@ $(document).ready(function(){
       }, 500);
     }); 
 
+    
+    $('.btns-project').on('click', function(){
+      var keyname = $(this).attr('data-attr');
+      
+      window.open(base_url+'projeto/'+keyname);
+    });
+
+
     $('.default-input').on('click',function(){
       $(this).removeClass('error-input');
       $('.error-msg').text('');

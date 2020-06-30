@@ -36,10 +36,11 @@ class ajaxController extends controllerHelper{
         if(isset($_POST['action']) && $_POST['action'] == 'criar'){
             $keyname = $_POST['keyname'];
             $nome = $_POST['nome'];
+            $resumo = $_POST['resumo'];
             $desc = $_POST['desc'];
             $tags = $_POST['tags'];
 
-            if($projetoOperator->insertProject($nome, $keyname, $desc, $tags) == true){
+            if($projetoOperator->insertProject($nome, $keyname, $resumo, $desc, $tags) == true){
                 $ajaxResponse['msg'] = 'done';
                 echo json_encode($ajaxResponse);
             }else{
@@ -61,11 +62,12 @@ class ajaxController extends controllerHelper{
         if(isset($_POST['action']) && $_POST['action'] == 'editar'){
             $id = $_POST['id'];
             $nome = $_POST['nome'];
+            $resumo = $_POST['resumo'];
             $keyname = $_POST['keyname'];
             $desc = $_POST['desc'];
             $tags = $_POST['tags'];
 
-            if($projetoOperator->editProject($id, $nome, $keyname, $desc, $tags)){
+            if($projetoOperator->editProject($id, $nome, $resumo, $keyname, $desc, $tags)){
                 $ajaxResponse['msg'] = 'done';
                 echo json_encode($ajaxResponse);
             }else{
